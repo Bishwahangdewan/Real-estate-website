@@ -1,0 +1,93 @@
+<?php
+/*
+    *   PDO Database Class
+    *   Connect to Database
+    *   Create Prepared Statement
+    *   Bind Values
+    *   return rows and results
+    */
+
+    class Database{
+        private $host=DB_HOST;
+        private $user=DB_USER;
+        private $pass=DB_PASS;
+        private $dbname=DB_NAME;
+
+        //databae handler
+        private $dbh;
+        //statement
+        private $stmt;
+        //error
+        private $error;
+
+        public function __construct(){
+            //Set dsn
+            $dsn='mysql:host='.$this->host.';dbname='.$this->dbname;
+            $options=array(
+                PDO::ATTR_PERSISTENT=> true,
+                PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION
+            );
+
+            //create pdo instance
+            try{
+                $this->dbh=new PDO($dsn,$this->user,$this->pass,$options);
+            }catch(PDOException $e){
+                $this->error=$e->getMessage();
+                echo $this->error;
+            }
+        }
+
+            //prepare statement wityh query
+            public function query($sql){
+                $this->stmt=$this->dbh->prepare($sql);
+            }
+
+            //Bind values
+            public function bind($param,$value,$type=null){
+                if(is_null($type)){
+                    switch(true){
+                        case is_int($value):
+                        $type=PDO::PARAM_INT;
+                        break;
+
+                        case is_bool($value):
+                        $type=PDO::PARAM_BOOL;
+                        break;
+
+                        case is_null($value):
+                        $type=PDO::PARAM_NULL;
+                        break;
+
+                        default:
+                        $type=PDO::PARAM_STR;
+                    
+                    }
+                }
+
+                //BIND
+                $this->stmt->bindValue($param,$value,$type); 
+            }
+
+            //Execute statement
+            public function execute(){
+                return $this->stmt->execute();
+            }
+
+            //Get Result set as array of objects
+            public function resultSet(){
+                    $this->execute();
+                    return $this->stmt->fetchAll(PDO::FETCH_OBJ);
+            }
+
+            //Get Single result as object
+            public function single(){
+                $this->execute();
+                return $this->stmt->fetch(PDO::FETCH_OBJ);
+            }
+
+            //Get rowcount
+            public function rowcount(){
+                return $this->stmt->rowCount();
+            }
+     }
+    

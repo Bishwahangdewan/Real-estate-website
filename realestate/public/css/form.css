@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family:Roboto,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height:1.4;
+}
+
+/*-----------FORM----------------*/
+
+.main-row{
+    background:url("../img/showcase.jpg")no-repeat 5% 20%/cover;
+    height:110vh;
+}
+
+.main-row .main-col{
+    width:40%;
+    margin:auto;
+   
+}
+
+.main-row .main-col .card{
+    padding:2rem;
+    text-align:center;
+    background: #30caa0;
+    color:#333;
+   
+}
+
+form .form-group{
+    padding:0.7rem 0;
+    text-align:justify;
+}
+
+form .form-group label{
+    display:block;
+    padding-bottom:5px;
+}
+
+form .form-group .form-control{
+    width:100%;
+    height:2rem;
+    border-radius:5px;
+    border:1px solid #bbb;
+    outline:none;
+}
+
+form .row{
+    padding-top:15px;
+}
+
+form .row .col .btn-success{
+    background:#eca643;
+    padding:0.8rem 1.4rem;
+    border:none;
+    font-size:18px;
+}
+
+
+form .row .col .btn-success:hover{
+    opacity:0.8;
+}
+
+form .row .col a{
+    color:#333;
+}
+
+form .row .col a:hover{
+    color:#eee;
+}
+
+

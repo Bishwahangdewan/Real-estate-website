@@ -1,0 +1,185 @@
+.showcase-content form input[type="text"]{
+	width:250px;
+}
+
+
+
+#navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:block;
+    color:#444;
+    z-index:1;
+    align-items:center;
+    transition:linear 0.2s;
+    padding:0;
+}
+
+#navbar div{
+	display:flex;
+    padding:0.8rem 3rem;
+    padding-right:1.5rem;
+}
+
+#navbar ul li a{
+    padding:0.5rem 1rem;
+    transition: linear 0.1s; 
+    font-weight:bold;
+    display:block;
+}
+
+#navbar ul li a:hover{
+   background:black;
+   border-bottom:0;
+}
+
+
+#navbar ul{
+    display:none;
+    list-style-type: none;
+ 	width:100%;
+    padding:0;
+    background:#333;
+     
+}
+
+
+
+.logo{
+	margin-left:-40px;
+	padding:10px 0;
+	width:100%;
+}
+
+.icon{
+    padding-top:1rem;
+    margin-right:-10px;
+}
+
+.icon i{
+
+    display:inline;
+    padding:7px;
+    border:2px solid #ddd;
+    border-radius:3px;
+}
+
+#featured .container .houses{
+    display:block;
+}
+
+
+#featured .container .houses .house{
+    width:100%;
+    border:1px solid #ddd;
+    margin-bottom:1rem;
+}
+
+.pmed{
+    padding:1rem;
+}
+
+
+.service-content{
+	width:100%;
+}
+
+.service-img{
+	display:none;
+}
+
+
+.footer-content{
+	display:block;
+}
+
+footer .footer-content .about,footer .footer-content .contact,footer .footer-content .newsletter{
+    width:100%;
+	padding:5% 0;
+	border-bottom:2px solid #444;
+
+}
+
+footer .footer-content .about p{
+	padding:0 3rem;
+}
+
+
+
+
+/*-----------buy----------*/
+
+.buyjum{
+    display:block;
+}
+
+.flexjum{
+    width:100%;
+    padding: 5%;
+    border-bottom: 2px solid #ccc;
+}
+
+.buylink{
+    display:none;
+}
+
+.info{
+    width:100%;
+}
+
+
+
+.search-house{
+    width:90%;
+    display:block;
+}
+
+.search-house-img{
+    width:100%;
+}
+
+.search-house-content{
+    width:100%;
+    padding:0;
+}
+
+
+
+
+.back-header .back-container{
+    display:block;
+}
+
+.house-name,.back-house-price{
+    width:100%;
+    text-align:center;
+}
+
+.back-img .back-container{
+    display:block;
+}
+
+.back-house-img{
+    width:100%;
+}
+
+.agentreq{
+    width:100%;
+}
+
+.listing{
+    width:100%;
+    padding:10px;
+    border-bottom:2px solid #ddd;
+}
+
+
+.main-row .main-col{
+    width:90%;
+}
+
+form .row .col .btn-success{
+    width:100%;
+    margin-bottom:10px;
+}
